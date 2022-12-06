@@ -5,4 +5,36 @@
 # OPTIONS https://websitesupport247.com/wp-json/wp/v2/posts
 
 # The Head section is not normally seen by us humans, but instead used by the client to handle the return data
-HEAD  https://websitesupport247.com/wp-json/wp/v2/posts
+# HEAD  https://websitesupport247.com/wp-json/wp/v2/posts
+
+# To retrieve data from a source use GET request
+# GET https://websitesupport247.com/wp-json/wp/v2/posts
+# Authorization: Basic {user} {password}
+
+# To Add NEW data from a source use POST request
+#  POST  https://websitesupport247.com/wp-json/wp/v2/posts
+#  Authorization: Basic {user} {password}
+#  Content-Type: application/json
+
+#  // Code the data for the actual post which should generate a 201 status
+#  {
+#     "title": "A post created via the REST API!",
+#     "content": "This is the content of the post created with the REST API.",
+#     "status": "publish",
+#     "author": 1
+
+#  }
+# POST, PATCH, PUT in some cases accomplish the same objective but you have to ask the REST API using OPTIONS to know for sure which method to use, accordingly.
+# To update (change data) from a source use PUT request
+#  PUT  https://websitesupport247.com/wp-json/wp/v2/posts/15
+#  Authorization: Basic {user} {password}
+
+ # Only define the data you want to update (change) in the existing record
+#  {
+#     "title": "The New REST API Post Title!"
+#  }
+
+# To remove data from a source use DELETE request
+#  DELETE  https://websitesupport247.com/wp-json/wp/v2/posts/15
+# Authorization: Basic {user} {password}
+
